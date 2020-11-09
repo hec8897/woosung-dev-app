@@ -35,7 +35,7 @@ router.post('/', function(req, res, next) {
   const apiKey = '20208820d5c0f21c50d7c214b02edb14e765';
 
   const url = 'http://ncpms.rda.go.kr/npmsAPI/service';
-  const cropName = req.body.crop
+  const cropSectionCode = req.body.cropSectionCode
   request({
     url: url,
     method : 'POST',
@@ -43,6 +43,8 @@ router.post('/', function(req, res, next) {
         apiKey,
         serviceCode:'SVC12',
         serviceType:'AA001',
+        cropSectionCode,
+        displayCount:50
     }
 
   }, function(error, response, body){
