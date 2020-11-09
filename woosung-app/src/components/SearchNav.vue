@@ -60,6 +60,7 @@ div.Nav {
     ul {
         padding: 0;
         border-bottom: 1px solid #d0d0d0;
+        justify-content: space-around;
 
         li {
             cursor: pointer;
